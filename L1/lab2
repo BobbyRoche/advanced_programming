@@ -1,0 +1,141 @@
+Robert Roche 
+Lab2
+
+Q1:
+./lab2/eg.bash
+./lab2/heidi.list
+./lab2/Bash/tmp/2at
+./lab2/Bash/tmp/Cat
+./lab2/Bash/tmp/at
+./lab2/Bash/tmp/bat
+./lab2/Bash/tmp/cat
+./lab2/Bash/tmp/chat
+./lab2/Bash/tmp/hat
+./lab2/Bash/tmp/hello
+./lab2/Bash/tmp/list
+./lab2/Bash/tmp/mat
+./lab2/Bash/spellExample
+./lab2/Bash/.descin.swp
+./lab2/Bash/.hidden
+./lab2/Bash/Makefile
+./lab2/Bash/check.bash
+./lab2/Bash/eg.bash
+./lab2/Bash/getopts.bash
+./lab2/Bash/hello.c
+./lab2/Bash/ids
+./lab2/Bash/index.html
+./lab2/Bash/index2.html
+./lab2/Bash/list
+./lab2/Bash/loop_subshell.bash
+./lab2/Bash/out.bash
+./lab2/Bash/outline.html
+./lab2/Bash/rv.bash
+./lab2/Bash/args.bash
+./lab2/Bash/breadIsDangerous.txt
+./lab2/Bash/func.bash
+./lab2/Bash/isatty.bash
+./lab2/Bash/makefile
+./lab2/Bash/varChange
+./lab2/Bash/msg
+./lab2/Bash/hello
+./lab2/Bash/mySettings
+./lab2/Bash/descin
+./lab2/Bash/hello.bash
+./lab2/Bash/fred
+./lab2/lab
+./lab2/lab2
+
+Q2:
+
+input:  find *.bash
+
+Q3:
+
+output: gotMe.bash
+
+Q4:
+
+97      499     2960
+lines  words    characters
+
+Q5:
+
+grep -o "the" Bash/breadIsDangerous.txt | wc -l
+
+Q6:
+
+There is now a spellExample.bak file as well as the spellExample file
+
+Q7:
+
+The diff command compared the two files line by line and printed the lines with differences.
+1c1
+< I went to a garden party
+---
+> I went to a gadren party
+3c3
+< bunch of my old friends did somehting
+---
+> bnuch of my old freinds did somehting
+6d5
+< An extra line
+
+Q8:
+
+There was no output because the lines were identical.
+
+Q9:
+
+Command:
+
+du -h * /home/rr696/CS265/lab2 | sort -n -r | head -n 8
+
+Output:
+
+12K	Bash
+8.0K	outline.html
+8.0K	index.html
+4.0K	varChange
+4.0K	spellExample.bak
+4.0K	spellExample
+4.0K	rv.bash
+4.0K	out.bash
+
+these are the 8 largest files in the lab2 directory.
+
+Q10:
+
+For this question I am formatting it by showing the input, the output, and then the explanation.
+
+input: grep dough breadIsDangerous.txt
+output:
+roven that as little as one pound of dough can be used to
+5.   Bread is made from a substance called "dough." It has been
+proven that as little as one pound of dough can be used to
+
+This command checked the file for the string "dough" and printed every line that contained it.
+
+input: echo $?
+output:0
+
+echo $? prints out the return value of the last command. If it worked properly it should return a 0, if not it will return a non-zero number.
+
+input:grep uniqueString breadIsDangerous.txt
+output: (none)
+
+uniqueString yielded no output
+
+input: echo $?
+output: 1
+
+This proves there was some sort of error when running uniqueString.
+
+input: grep dough noSuchFile
+output: grep: noSuchFile: No such file or directory
+
+Could not find the file named noSuchFile.
+
+input: echo $?
+output: 2
+
+This time grep failed because it could not find the file to search through.

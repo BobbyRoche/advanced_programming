@@ -1,0 +1,11 @@
+#/bin/bash
+#Robert Roche
+#CS265 Section 004
+
+gcc -o sign sign.c
+
+./sign < /usr/share/dict/words | sort | ./squash > out
+awk '{ print NF " " $0}' < out | sort -n -r | head
+
+
+

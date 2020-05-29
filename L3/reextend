@@ -1,0 +1,13 @@
+#!/bin/bash
+#Robert Roche
+#CS265 Section 004
+
+if (($# != 2)); then
+	echo "ERROR: Please enter exactly 2 args"
+	exit 2
+fi
+
+for i in *$1
+	do
+		mv "$i" "${i%$1}$2"
+	done

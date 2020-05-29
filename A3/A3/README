@@ -1,0 +1,19 @@
+###############
+Robert Roche
+CS265-004
+Final Asignment
+################
+
+I have the name of the log file being taken in as the last command line argument. This allows for use of different files for testing.
+
+
+
+Commands
+
+./accounts -i name_of_log_file
+
+./accounts -h name_of_log_file
+
+./accounts -t name_of_log_file
+		
+./accounts -? name_of_log_file

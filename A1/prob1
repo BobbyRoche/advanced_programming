@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Robert Roche
+#Problem 1
+
+MSGS=$(ls -R $ARCHIVE | grep '^prob' | wc -l)
+PROBDIR=$(find $ARCHIVE -name "prob*" -printf '%h\n' | sort -u | wc -l)
+
+printf "%s %8s\n" "$PROBDIR" "$MSGS"
+

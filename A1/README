@@ -1,0 +1,22 @@
+Robert Roche
+Assignment 1 README file
+
+Problem 1) For problem 1 used a series of BASH commands to make a variable containing the number of messages, and the number of directories
+			  that contained messages.
+
+
+Problem 2)For problem 2 I used a similar method as problem 1. I got the necessary lines and cut away the undesirable
+			 parts of the string. I then sorted and used 'uniq' to get the number of messages in each thread. I then did a numerical sort
+			 based on the results from the uniq. I then used an awk expression to begin at the end of the file and work backwards ensuring
+			 all the same length threads are displayed under the length.
+
+Problem 3)For problem 3 I found all of the lines that began with TimeStamp: since in the email that was the header. 
+			 I used these lines to match the argument date with the lines containing the argument date and then printed
+			 the message number for each message that was sent on that date.
+
+Problem4)For problem 4 I used a similar identification techingue for problem 3 being sure to only site the header 'To:'. 
+			I then removed all of the line except for what was after the @ and before the next space. This allowed me 
+			to sort case sensitively and then count how many unique results I got.
+
+These files use a combination of BASH commands and awk. All that is needed is the arguments (specified in instructions)
+and the ARCHIVE (file location). Some of these files make temp files but they are deleted at the end of each program.

@@ -1,0 +1,6 @@
+#!/bin/bash
+file=$2 
+$(make build)
+java accounts $1 $file
+$(make clean)
+PATH=$PATH:.

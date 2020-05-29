@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Robert Roche
+#Problem 3
+
+#This bash script takes in a date as 3 arguments and prints all the messages sent on that date
+
+STR="TimeStamp: "$2"/"$3"/"$1
+grep -r -l "^$STR" $ARCHIVE | rev | cut -d/ -f1 | rev 
+

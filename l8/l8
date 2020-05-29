@@ -1,0 +1,21 @@
+Robert Roche
+Lab 8
+
+Q1.)
+	i.The user should not be aware of how the code works or functions. Just that it works.
+	ii.Do not have functions that perform the same or similar tasks different ways
+	iii.Do not make changes that the user does not want, or is not fully aware of. Make sure everything is documented. 
+	iv.Have a consistent format everywhere. Do not change up the way things work on the user.
+
+Q2.) Cannot have more than 199 characters in a line, and no more than 20 fields per line.
+
+Q3.) Line and field sizes are not limited. Checking for the end of a line was added Now can split lines into fields and supports multiple field separators. Can also get field and number of fields.
+
+Q4.) Cannot parse to csv files at once. There is only one instance of the required variable. For example, there is only one line variable which makes parsing multiple lines pointless. It also cant read from stdin.
+
+Q5.) This version returns true valued indices when looking up indices rather than pointers. It also can read from stdin.
+
+Q6.) The user does not need to know about the actual functions or coding to implement the code. Functions perform unique operations and no excess or repeating functions are present. Changes are not made without the users knowledge. Format and style are consistent and straightforward. 
+Therefore, yes it does seem to fit within the interface guidelines. 
+
+

@@ -1,0 +1,79 @@
+Robert Roche
+Practice of Programming 
+Excersises Chpt 1
+
+1-1: The traditional definition of TRUE and FALSE is reversed here. 
+	  Normally 1 would be TRUE and 0 FALSE. Using them in an if statement
+	  would be confusing. Also saying not_eof is also a bad idea. It would 
+	  be more clear to just use eof and set it to true.
+
+1-2: 	int isFirstSmaller(char *firstStr, char *secondStr) 
+		{
+			if (strcmp(first, second) < 0)
+				return 1;
+			else
+				return 0;
+		}
+
+
+1-3: Jibberish	
+
+
+1-4:
+		if ( (c != 'y') && (c != 'Y') )
+	  		return;
+
+		if (length > BUFSIZE)
+			length = BUFSIZE;
+
+		flag = !flag;
+
+		quote = 0;
+		if ( (*line) == '"')
+			quote = 1;
+
+		bit = val & 1;
+
+	
+1-5: Read being called 2 times without any execution order possible output issues.
+
+1-6: 1 2, 2 1, 1 1
+		Putting it into Eclipse produced 1 2
+
+1-7: 
+		if ( (!istty(stdin)) && (!istty(stdout)) && i(!istty(stderr)) 
+			return(0);
+
+		return (retval);
+
+		for (k = 0; k < 4; k++) {
+			scanf(%lf", &dx);
+			x += dx;}
+
+	
+1-8: This program will give an error because count is incremented before the if statement. This could also 
+	  be done in a for loop with simpler variable names. This is just looking for an index. 
+
+	for (int i = 0; i < total; i++) 
+	{
+		if (this.getName(i) == nameTable.userName()) 
+			return true;
+	}
+	 
+
+
+1-9:	May not function properly if certain circumstances are not met. c parameter is may be evaluated mutiple times
+
+1-10: static const double FT2METER = 0.30408;
+		static const double METER2FT = 3.28084;
+		static const double MI2FT = 5280.0;
+		static const double MI2KM = 1.609344;
+		static const double SQMI2SQKM = 2.589988;
+
+1-11: 
+		1.Comments are incorrect. Giving a return value for a void function.
+
+		2.Does not give any useful information
+
+		3.This comment points out the obvious but does not cover what could be misunderstood before execution
+

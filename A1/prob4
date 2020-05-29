@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Robert Roche
+#Problem 4
+
+#This script finds all of the host names from the messages sent, prints all he unique ones and how many of each are used
+
+
+grep -r '^To:' $ARCHIVE |cut -d@ -f2 | cut -d" " -f1 | sort -s | uniq -ic | sort -k1 -g -r>>sorted_list #gets and sorts hostnames. counts number of each
+
+awk ' { t = $1; $1 = $2; $2 = t; printf "%-35s %-30s\n", $1, $2} ' sorted_list >> new_list #swaps columns for formatting 
+
+echo -n "total ">>new_list | wc -l < new_list >> new_list
+
+cat new_list
+
+rm -rf new_list
+rm -rf sorted_list
+

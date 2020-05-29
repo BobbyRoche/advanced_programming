@@ -1,0 +1,11 @@
+#!/bin/bash
+#Robert Roche
+#CS265 Section 004
+
+for i in *.mp3
+	do
+		artist=${i%% - *} #makes everything before but not including '-' a string called artist
+		title=${i#* - }   #makes everything after but not including the first occurence of '-' a string called title	
+		mkdir -p "$artist"
+		mv "$i" "$artist/$title"
+	done

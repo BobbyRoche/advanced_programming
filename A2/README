@@ -1,0 +1,8 @@
+Robert Roche
+
+Assignment2 README
+
+The code is pretty self explanitory.
+
+All I wanted to note is I believe it was a hardware issue on my end, 
+but when entering stdin I had to hit ctrl-D twice before it would stop taking input.

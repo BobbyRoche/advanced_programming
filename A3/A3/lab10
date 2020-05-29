@@ -1,0 +1,43 @@
+Robert Roche
+Lab10 
+Charts and Conclusions
+
+Q1:
+					{			T(n)/f(n)			}
+n		T(n)		f(n)=n	f(n)=n^2		f(n)=n^3
+--------------------------------------------
+10		2.6		0.26		26*10^-3	   26*10^-4
+20		6.0		0.30		15*10^-3	   7.5*10^-4
+30		9.73		0.32		11*10^-3 	3.6*10^-4
+40		13.64		0.34		8.5*10^-3	2.1*10^-4
+50		17.61		0.35		7.0*10^-3	1.4*10^-4
+60		21.82		0.36		6.1*10^-3	1.0*10^-4
+	
+T(n): Continuously growing toward infinity. Therefore, T(n) = w(1) and is bound below by a constant.
+
+T(n)/f(n): Increasing to infintity. So, T(n) is bound below by a line, but not tightly. T(n) = w( n )
+
+T(n)/f(n)^2: Trending towards a non-zero constant. T(n) = Θ(n^2).
+
+Tn)/f(n)^3 : Decreasing towards zero, f(n) is an upper bound and T(n) = o(f(n))
+
+Q2:
+						{				T(n)/f(n)			}
+n		T(n)			f(n)=n		f(n)=n^2		f(n)=n^3
+------------------------------------------------
+10		4.57*10^7	4.57*10^6	4.57*10^5	4.57*10^4
+20		9.81*10^7	4.91*10^6	2.46*10^5	1.23*10^3
+30		1.54*10^8	5.13*10^6	1.71*10^5	5.7*10^3
+40		2.1*10^8		5.25*10^6	1.31*10^5	3.28*10^3
+50		2.65*10^8	5.3*10^6		1.06*10^5	2.12*10^3
+60		3.2*10^8		5.33*10^6	8.89*10^4	1.48*10^3
+				
+T(n): Increasing towards a non-zero constant,  T(n) = w(1) and is bound below by a constant.
+
+T(n)/f(n) : Increasing towards infinity, so T(n) is bound below by a line. T(n) = w(f(n)).
+
+T(n)/f(n)^2 : Decreasing towards zero or a non zero constant. T(n) = o(f(n)).
+
+T(n)/f(n)^3 : Decreasing towards zero. T(n) = o(f(n)) and f(n) is an upper bound.
+
+

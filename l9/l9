@@ -1,0 +1,23 @@
+Robert Roche
+Lab9
+CS265
+
+
+Q1: Running bug3 caused the error : Segmentation fault (core dumped).
+    There is a new file exe called bug3 and a file called core was recently modified
+
+Q2: 2 functions bombed:
+
+	0x00000000004009ad in inTable()
+	and
+	0x0000000000400920 in main()
+
+Q3: The error in bug3.c was Segmentation fault (core dumped)
+ 
+ This bug was fixed by incrementing numlines after the pointer was returned by strdup(buff); It was trying to read and write to memory that did not exist.
+
+Q4: This is a logic error rather than a syntactic error, thus the compiler does not catch it. To fix this brackets need to be placed under the for
+ 		loop around all code that wants to be run in the loop.
+
+Q5:
+This will cause an error. The string comparison function will not be able to tell the difference between int values.

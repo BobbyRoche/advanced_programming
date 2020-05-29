@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Robert Roche
+#Problem 2
+#This bash script finds how many messages are in each thread and displays those with the most
+
+#The next line recursively searches each file in each subdirectory for the lines beginning with prob.
+#Those filenames are transformed into the desired string and sorted accordingly
+
+ls -R $ARCHIVE | grep '^prob' |cut -d'b' -f2 | cut -d'_' -f1 | sort | uniq -c | sort -k1 -g -r >> sorted_file
+sed "s/^[ \t]*//" -i sorted_file
+
+head -n1 sorted_file | cut -d" " -f1 
+
+awk -v max=0 '{if($1>=max){thread=$2; max=$1; print thread}} ' sorted_file #start at the highest number in column1 and check if any are higher or equal
+
+rm -f sorted_file

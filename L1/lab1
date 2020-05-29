@@ -1,0 +1,31 @@
+Robert Roche 
+CS265
+Answer Sheet
+
+
+Q2: After typing ls -l I can see all of the files/directories in my current directory. My CWD is my Lab01 directory which includes the vi_lab file
+as well as my lab01 answersheet. Also included are the 2 files that were requested to be copied for this lab (funny, hello.bash). I can see the permissions
+on each of these files as well as the owner, group, size, date, and time of creation.
+
+Q3: In this case, giving executing chmod 644 would allow the owner read and write access. The group and the others have read only access
+
+Q4:The chmod 755 command would give read, write, and execute permission to the owner. The group and others have read an execute permissions. 
+
+Q5: Yes
+
+Q6:Yes
+
+Q7: No
+
+Q8: I can use the command chmod and either use 7 or 5 as the first digit. You can also use chmod u+x to give yourself execute permission.
+
+Q9: The editor gave me an error (E45) and stated I had read only access.
+
+Q10:
+	ls *: This displayed all of the files in my directory (non hidden)
+	ls a*: This displayed all files that started with 'a'.
+	ls *m*: This displayed all files that contain 'm'.
+	ls anno?: This displayed the 'annoy' file
+	ls annoy?: This yielded no output, I expect to see annoy.cc but I did not. 
+
+Q11: Using a space created two separate files to edit.

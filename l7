@@ -1,0 +1,89 @@
+Robert Roche 
+
+Lab7 Answer Sheet
+
+
+
+Q1.)addsuffix() adds a suffix to each prefix linked list. It then calls another function to shift the prefix. 
+	add() looks to see if a prefix is already in the table, if it's not it is added. Then addsuffix() is called.
+
+Q2.)lookup() searches for a prefix in the table and creates one if it is not found. If it is found a pointer is returned. 
+	lookup() is called by add() and generate().
+
+Q3.)
+		prefix 	 | suffix
+	------------------
+	(null)(null) | It's
+	(null) It's	 | s
+	It's   a		 | new
+	a      new	 | dawn
+	new    dawn	 | (null)
+
+
+a) "It's" has 3 pointers
+b)	"a" has 3 pointers
+c)	"new" has 3 pointers
+d)	"dawn" has 2 pointers
+
+
+Q4.)The pointers allow for the string to be pointed to and used multiple times, but only stored in memory once. 
+
+Q5.)If you change the stored string it could throw off all of the pointers. Also allocating memory in C may be confusing for some
+	less familiar users.
+
+Q6.)
+void cleanup()
+{
+for(int i = 0; i < NHASH; i++)
+	freestate(st[i])
+}
+
+void freestate(State *state)
+{
+	for(int j; j < NPREF; j++)
+		free(state -> pref[j];
+	free_suffix(state -> suf);
+	if(state->next!=NULL)
+	{
+		freestate(state->next);
+		free(state->next);
+	}
+	free(state);
+}
+
+void free_suffix(Suffix *suf)
+{
+	free(suf->word);
+	free_suffix(suf->next);
+	free(suf);
+}
+
+
+Q7.)I had no idea how to do this in one function. I used some internet sources to help me with syntax, and I broke it into 3 functions.
+	To some up my answer I struggled with the syntax and making it all one function.
+
+Q8.)If a table of unique strings was created, each unique string would have the abilitiy to be freed once.
+
+Q9.)The prefixes are stored in a deque. This allows for elements to be pushed and popped at both ends (hence the name sounding like 'double queue'). 
+	because of the automatic shifting provided this is more suitable for markov than a vector.
+
+Q10.)A map will act as a dictionary. It will store the prefix as the key, and the vector of suffixes as the values.
+
+Q11.)The suffixes are stored in a linked-list, which is stored in a map as the value to the prefix key/data.
+
+Q12.)The code is definitely simpler to read compared to the C version. The vector also allows for some easier 
+	 manipulation of elements.
+
+Q13.)This version runs slower than the C version. It also uses more memory.
+
+Q14.)The prefixes are stored as a tuples with two elements. 
+
+Q15.)A Python dictionary serves as the hash table. (keys/values)
+
+Q16.)The suffixes are each stores in a list which is a value that relates to a prefix key.
+
+Q17.)The code is very easy to understand. There's no use of pointers which also allows for easier implementation
+
+Q18.)Python is the slowest of the three implementations. It is also the most taxing on memory.
+
+
